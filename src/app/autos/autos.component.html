@@ -1,23 +1,24 @@
-<!-- <p>
-  autos works!
-</p> -->
-
 <h1>Directivas</h1>
 <div class="container">
-  
+
   Marca:<input type="text" [(ngModel)]="marca" />
   <br/> 
-  
+
   Modelo:<input type="text" [(ngModel)]="modelo" />
   <br/> 
   
   Modelo:<input type="text" [(ngModel)]="modelo" />
   <br/>
 
-  <ul>
-    <li>{{marca}}</li>
-    <li>{{modelo}}</li>
-    <li>{{anio}}</li>
-  </ul>
-
+  <div class="container" [ngClass]="{
+    borderRed: marca === 'Nissan',
+    borderYellow: marca === 'Mazda',
+    borderBlue: marca === 'Toyota'
+  }">
+    <ul>
+      <li>{{marca}}</li>
+      <li>{{modelo}}</li>
+      <li>{{anio}}</li>
+    </ul>
+  </div>
 </div>
