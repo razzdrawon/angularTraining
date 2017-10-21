@@ -2,25 +2,22 @@
   autos works!
 </p> -->
 
+<h1>Directivas</h1>
 <div class="container">
+  
+  Marca:<input type="text" [(ngModel)]="marca" />
+  <br/> 
+  
+  Modelo:<input type="text" [(ngModel)]="modelo" />
+  <br/> 
+  
+  Modelo:<input type="text" [(ngModel)]="modelo" />
+  <br/>
+
   <ul>
     <li>{{marca}}</li>
     <li>{{modelo}}</li>
     <li>{{anio}}</li>
   </ul>
 
-
-  <button *ngIf="!esVisible" (click)="muestraMarcas()">
-    Mostrar Marcas
-  </button>
-
-  <button *ngIf="esVisible" (click)="ocultaMarcas()">
-    Esconder Marcas
-  </button>
-
-  <h1>Nuestro Arreglo</h1>
-
-  <ul id="autos" *ngIf="esVisible" >
-    <li *ngFor="let marca of marcas"> {{marca}}</li>
-  </ul>
 </div>
